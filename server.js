@@ -6,7 +6,13 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-app.use(cors({ origin: "*" }));
+const cors = require("cors");
+
+app.use(cors({
+    origin: ["https://dainty-eclair-08ae9c.netlify.app"], // Allow Netlify frontend
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"]
+}));
 
 // Ensure MONGO_URI is defined
 if (!process.env.MONGO_URI) {
