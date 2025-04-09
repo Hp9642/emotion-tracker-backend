@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 // ✅ Correct CORS Setup (Allow Netlify Frontend)
 app.use(cors({
-    origin: "https://dainty-eclair-08ae9c.netlify.app", // Allow only Netlify frontend
+    origin: ['https://happybirthdayananya.site', 'https://dainty-eclair-08ae9c.netlify.app'],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
 }));
